@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ts-node ./scripts/set_env.ts --ename=dev && ng serve",
+    "env:dev": "ts-node ./scripts/set_env.ts --ename=dev",
+    "env:prod": "ts-node ./scripts/set_env.ts --ename=dev",
+    "start": "npm run env:dev && ng serve",
     "build": "ng build",
-    "build:prod": "ts-node ./scripts/set_env.ts --ename=prod && ng build --aot --prod",
-    "build:heroku": "ng build --aot --prod",
+    "build:prod": "npm run env:prod && ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

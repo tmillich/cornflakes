@@ -8,7 +8,7 @@
     "start": "npm run env:dev && ng serve",
     "build": "ng build",
     "build:prod": "npm run env:prod && ng build --aot --prod",
-    "build:heroku": "ts-node/scripts/set_env.ts --ename=prod && ng build --aot --prod",
+    "build:heroku": "ts-node ./scripts/set_env.ts --ename=prod && ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

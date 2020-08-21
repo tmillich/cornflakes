@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "node server.js --port $PORT",
-    "heroku-postbuild": "npm install && cd frontend/angular/ && npm install && cd ../../backend && npm install"
+    "heroku-postbuild": "npm install && cd frontend/angular/ && npm install && npm run build:heroku && cd ../../backend && npm install",
+    "postbuild": "npm install && cd frontend/angular/ && npm install && npm run build:prod && cd ../../backend && npm install"
   },
   "dependencies": {
     "dotenv": "^8.2.0"

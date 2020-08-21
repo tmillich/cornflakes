@@ -1,11 +1,12 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Serve Angular App" type="js.build_tools.npm">
-    <package-json value="$PROJECT_DIR$/frontend/angular/package.json" />
+  <configuration default="false" name="[PROD] Start Project" type="js.build_tools.npm">
+    <package-json value="$PROJECT_DIR$/package.json" />
     <command value="run" />
     <scripts>
       <script value="start" />
     </scripts>
     <node-interpreter value="project" />
+    <package-manager value="npm" />
     <envs />
     <method v="2" />
   </configuration>

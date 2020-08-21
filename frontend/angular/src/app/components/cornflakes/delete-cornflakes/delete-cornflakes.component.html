@@ -1,0 +1,13 @@
+<app-standard-modal>
+  <div modal-header>
+    <h3 class="modal-title">Create Cornflakes</h3>
+  </div>
+  <div modal-body>
+    <form [formGroup]="cornflakeForm" id="cornflakeForm" autocomplete="on">
+      <form-body-cornflakes [cornflakeForm]="cornflakeForm" [disable]="disabled"></form-body-cornflakes>
+    </form>
+  </div>
+  <div modal-footer>
+    <button class="btn btn-app-two" (click)="onDelete()" form="cornflakeForm">Delete Cornflake</button>
+  </div>
+</app-standard-modal>

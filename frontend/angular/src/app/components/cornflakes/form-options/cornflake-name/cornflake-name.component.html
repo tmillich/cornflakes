@@ -1,0 +1,26 @@
+<div class="form-group" [formGroup]="cornflakeForm">
+  <label>Name</label>
+  <div class="input-group">
+    <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-utensils"></i>
+                    </span>
+    </div>
+    <input
+      class="form-control"
+      type="text"
+      id="name"
+      formControlName="name"
+    >
+  </div>
+  <div *ngIf="!cornflakeForm.get('name').valid && cornflakeForm.get('name').touched"
+       class="help-block form-group">
+    <div *ngIf="cornflakeForm.get('name').hasError('required')">
+      Name is a requiered field
+    </div>
+    <div *ngIf="cornflakeForm.get('name').hasError('pattern')">
+      Start with a Capital letter.
+      It is not allowed to use special characters or even a number
+    </div>
+  </div>
+</div>

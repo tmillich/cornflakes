@@ -1,0 +1,17 @@
+{
+  "name": "backend_cornflakes",
+  "version": "0.0.1",
+  "description": "Backend of Cornflakes list",
+  "author": "Timon Mi",
+  "private": false,
+  "engines": {
+    "npm": "6.2.0",
+    "node": "10.9.0"
+  },
+  "scripts": {
+    "start": "node server.js --port $PORT"
+  },
+  "dependencies": {
+    "firebase-admin": "^6.0.0"
+  }
+}

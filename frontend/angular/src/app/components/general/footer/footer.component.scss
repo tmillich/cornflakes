@@ -1,0 +1,40 @@
+@import "app_variables";
+
+footer {
+  padding: 65px;
+  background-color: $color_main_three;
+}
+
+a {
+  color: $color_font;
+}
+
+a:visited {
+  color: $color_font;
+}
+
+h4 {
+  color: $color_font;
+}
+
+ul {
+  color: $color_font;
+  padding-left: 30px;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: inherit;
+  color: $color_font;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0px;
+}
+button:hover {
+  text-decoration: underline;
+}

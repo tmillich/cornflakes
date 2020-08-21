@@ -1,0 +1,25 @@
+<div class="form-group" [formGroup]="cornflakeForm">
+  <label>Producer</label>
+  <div class="input-group">
+    <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-building"></i>
+                    </span>
+    </div>
+    <input class="form-control"
+           type="text"
+           id="producer"
+           formControlName="producer"
+    >
+  </div>
+  <div *ngIf="!cornflakeForm.get('producer').valid && cornflakeForm.get('producer').touched"
+       class="help-block form-group">
+    <div *ngIf="cornflakeForm.get('producer').hasError('required')">
+      Producer is a requiered field
+    </div>
+    <div *ngIf="cornflakeForm.get('producer').hasError('pattern')">
+      Start with a Capital letter.
+      It is not allowed to use special characters or even a number
+    </div>
+  </div>
+</div>

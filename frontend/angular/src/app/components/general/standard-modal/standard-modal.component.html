@@ -1,0 +1,21 @@
+<div id="myModal" class="modal fade show" role="dialog" style="display:block; overflow: scroll;z-index:990;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><ng-content select="[modal-header]"></ng-content></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal()">
+          &times;
+        </button>
+      </div>
+      <div class="modal-body">
+        <ng-content select="[modal-body]"></ng-content>
+      </div>
+      <div class="modal-footer">
+        <ng-content select="[modal-footer]"></ng-content>
+        <button id="cancel" type="button" class="btn btn-cancel" data-dismiss="modal" (click)="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

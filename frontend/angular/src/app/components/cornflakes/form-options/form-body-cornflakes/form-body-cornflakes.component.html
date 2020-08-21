@@ -1,0 +1,25 @@
+<div class="form-row" [formGroup]="cornflakeForm">
+  <div class="col-md-12">
+    <div class="form-row">
+      <div class="col">
+        <cornflake-name [cornflakeForm]="cornflakeForm" [disable]="disabled"></cornflake-name>
+      </div>
+      <div class="col">
+        <cornflake-producer [cornflakeForm]="cornflakeForm" [disable]="disabled"></cornflake-producer>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <cornflake-age-group [cornflakeForm]="cornflakeForm" [disable]="disabled"></cornflake-age-group>
+      </div>
+      <div class="col">
+        <cornflake-type [cornflakeForm]="cornflakeForm" [disable]="disabled"></cornflake-type>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <cornflake-about [cornflakeForm]="cornflakeForm" [disable]="disabled"></cornflake-about>
+      </div>
+    </div>
+  </div>
+</div>

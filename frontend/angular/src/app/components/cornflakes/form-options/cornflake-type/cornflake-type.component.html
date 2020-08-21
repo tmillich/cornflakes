@@ -1,0 +1,17 @@
+<div class="form-group" [formGroup]="cornflakeForm">
+  <label>Type:</label>
+  <div class="form-group dropdown">
+    <select
+      class="form-control"
+      id="type"
+      formControlName="type"
+    >
+      <option
+        *ngFor="let type of allTypes"
+        [value]=type.id
+        [selected]="type.id == cornflakeForm.get('type').value"
+      >{{type.name}}
+      </option>
+    </select>
+  </div>
+</div>

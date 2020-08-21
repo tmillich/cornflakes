@@ -1,0 +1,32 @@
+@import "app_variables";
+
+#cornflakes_management {
+  background-color: $color_main_two;
+  min-height: 20rem;
+}
+
+#cornflakes_list_header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#noDataTemplate {
+  text-align: center;
+}
+
+.editbutton {
+  background-color: $color_main_four;
+  color: $font-header;
+  border-radius: 50%;
+}
+
+.removebutton {
+  background-color: #ff1953;
+  color: $font-header;
+  border-radius: 50%;
+}
+
+.fa.fa-edit {
+  height: 18px;
+  width: 15px;
+}

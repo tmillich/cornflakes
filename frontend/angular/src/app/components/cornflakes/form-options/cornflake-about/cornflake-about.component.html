@@ -1,0 +1,7 @@
+<div class="form-group" [formGroup]="cornflakeForm">
+  <label>About</label>
+      <textarea class="form-control" style="height:150px;" #noText
+                formControlName="about">
+        {{ cornflakeForm.get('about').value }}
+  </textarea>
+</div>

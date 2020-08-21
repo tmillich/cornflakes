@@ -1,0 +1,84 @@
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "utilities";
+@import "print";
+@import "app_variables";
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+
+body {
+  color: $color_font_two;
+  font-family: $font-body;
+}
+
+.btn-app {
+  margin-top: 0.5rem;
+  background-color: $color_main_five;
+  color: $color_font;
+  border-color: transparent;
+}
+
+.btn-app:hover {
+  background-color: $color_font;
+  color: $color_main_five;
+  border-color: transparent;
+}
+
+.btn-app-two {
+  margin-top: 0.5rem;
+  background-color: $color_main_four;
+  color: $color_font;
+  border-color: transparent;
+}
+
+.btn-app-two:hover {
+  background-color: $color_main_three;
+  color: $color_font;
+  border-color: transparent;
+}
+
+.descriptionSection {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.help-block {
+  color: #fff;
+  text-align: center;
+  margin-left: 40px;
+  padding: 5px;
+  background-color: $color_main;
+  border: 1px solid $color_main;
+  border-top: 0;
+}
+

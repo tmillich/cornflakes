@@ -1,0 +1,52 @@
+@import "app_variables.scss";
+
+
+#section {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: $color_main_four;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.middle_box {
+  margin: auto;
+}
+
+#login_button {
+  margin-top: 10px;
+}
+
+#error_row {
+  margin: auto;
+}
+
+#login_titel {
+  margin-bottom: 13px;
+}
+
+h3 {
+  color: $color_font;
+  font-family: $font-header;
+}
+
+label {
+  color: $color_font;
+}
+
+#email_formgroup {
+  padding-top: 20px;
+  border-top: 2px solid black;
+}
+
+.required {
+  color: red;
+}

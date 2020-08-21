@@ -1,0 +1,7 @@
+<router-outlet></router-outlet>
+<div *ngIf="dangerAlert.open" class="alert alert-danger alert-dismissible fade show app-alerts" role="alert">
+  <strong>{{ dangerAlert.titel }}</strong> {{ dangerAlert.message }}.
+  <button type="button" class="close" (click)="closeAlert()" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

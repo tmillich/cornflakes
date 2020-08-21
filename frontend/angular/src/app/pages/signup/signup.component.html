@@ -1,0 +1,137 @@
+<section id="section">
+  <div class="container text-center">
+
+    <div id="error_row" class="row">
+      <form [formGroup]="signup" id="signup" (ngSubmit)="signup.valid && onSubmit()" autocomplete="on"
+            class="middle_box">
+        <div class="col">
+          <h3 class="text-center" id="login_titel">Sign Up</h3>
+          <div class="form-group" id="email_formgroup">
+            <label>Email <strong class="required">*</strong></label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+              </div>
+              <input class="form-control"
+                     type="text"
+                     id="email"
+                     formControlName="email">
+            </div>
+            <div *ngIf="!signup.get('email').valid && signup.get('email').touched"
+                 class="help-block form-group">
+              <div *ngIf="signup.get('email').hasError('required')">
+                Email is a requiered field
+              </div>
+              <div *ngIf="signup.get('email').hasError('email')">
+                Should be an email.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Firstname <strong class="required">*</strong></label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-user"></i>
+                    </span>
+              </div>
+              <input class="form-control"
+                     type="text"
+                     id="firstname"
+                     formControlName="firstname">
+            </div>
+            <div *ngIf="!signup.get('firstname').valid && signup.get('firstname').touched"
+                 class="help-block form-group">
+              <div *ngIf="signup.get('firstname').hasError('required')">
+                Firstname is a requiered field
+              </div>
+              <div *ngIf="signup.get('firstname').hasError('pattern')">
+                Start with a uppercase Letter.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Lastname <strong class="required">*</strong></label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-user"></i>
+                    </span>
+              </div>
+              <input class="form-control"
+                     type="text"
+                     id="lastname"
+                     formControlName="lastname">
+            </div>
+            <div *ngIf="!signup.get('lastname').valid && signup.get('lastname').touched"
+                 class="help-block form-group">
+              <div *ngIf="signup.get('lastname').hasError('required')">
+                Lastname is a requiered field
+              </div>
+              <div *ngIf="signup.get('lastname').hasError('pattern')">
+                Start with a uppercase Letter.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Phone</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-user"></i>
+                    </span>
+              </div>
+              <input class="form-control"
+                     type="text"
+                     id="phone"
+                     formControlName="phone">
+            </div>
+            <div *ngIf="!signup.get('phone').valid && signup.get('phone').touched"
+                 class="help-block form-group">
+              <div *ngIf="signup.get('phone').hasError('pattern')">
+                E.164 standard! (+1..)
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Password <strong class="required">*</strong></label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-key"></i>
+                    </span>
+              </div>
+              <input class="form-control"
+                     type="password"
+                     id="password"
+                     formControlName="password">
+            </div>
+            <div *ngIf="!signup.get('password').valid && signup.get('password').touched"
+                 class="help-block form-group">
+              <div *ngIf="signup.get('password').hasError('required')">
+                Password is required.
+              </div>
+              <div *ngIf="signup.get('password').hasError('pattern')">
+                Password needs at least 6 character.
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <div class="row">
+      <a href="javascript:undefined" (click)="loginLink()" class="middle_box">Back to Login</a>
+    </div>
+
+    <div class="row">
+      <button class="btn btn-app middle_box" id="login_button" type="submit" form="signup">Sign up</button>
+    </div>
+  </div>
+</section>

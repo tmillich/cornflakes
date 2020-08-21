@@ -1,0 +1,64 @@
+<section id="section">
+  <div class="container text-center">
+
+    <div id="error_row" class="row">
+      <form [formGroup]="loginForm" id="loginForm" (ngSubmit)="loginForm.valid && onSubmit()" autocomplete="on" class="middle_box">
+        <div class="col">
+          <h3 class="text-center" id="login_titel">Login</h3>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-user"></i>
+                    </span>
+              </div>
+              <input class="form-control"
+                     type="text"
+                     id="email"
+                     formControlName="email">
+            </div>
+            <div *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched"
+                 class="help-block form-group">
+              <div *ngIf="loginForm.get('email').hasError('required')">
+                Email is a requiered field
+              </div>
+              <div *ngIf="loginForm.get('email').hasError('email')">
+                Should be an email.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fa fa-key"></i>
+                    </span>
+              </div>
+              <input class="form-control"
+                     type="password"
+                     id="password"
+                     formControlName="password">
+            </div>
+            <div *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched"
+                 class="help-block form-group">
+              <div *ngIf="loginForm.get('password').hasError('required')">
+                Password is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <div class="row">
+      <a href="javascript:undefined" (click)="signupLink()" role="button" class="middle_box">No Account?</a>
+    </div>
+    <div class="row">
+      <button class="btn btn-app middle_box" id="login_button" type="submit" form="loginForm">Login</button>
+    </div>
+    <div class="row" id="google_row">
+      <button id="google_box" class="btn middle_box social-box" (click)="googleLogin()">Login with Google</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<div class="form-group" [formGroup]="cornflakeForm">
+  <label>Age Group:</label>
+  <div class="form-group dropdown">
+    <select
+      class="form-control"
+      id="age_group"
+      formControlName="age_group"
+    >
+      <option
+        *ngFor="let ageGroup of allAgeGroup"
+        [value]=ageGroup.id
+        [selected]="ageGroup.id == cornflakeForm.get('age_group').value"
+      >{{ageGroup.name}}
+      </option>
+    </select>
+  </div>
+</div>

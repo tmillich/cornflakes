@@ -1,0 +1,31 @@
+@import "app_variables.scss";
+
+.container {
+  background: $color_mixed_box;
+}
+
+#section {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#back_btn {
+  font-size: 26px;
+}
+
+h1, h2 {
+  color: $color_font;
+}
+
+#error_row {
+  margin-left: auto;
+  margin-right: auto;
+}
+

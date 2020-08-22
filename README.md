@@ -55,7 +55,7 @@ I also tried to use no Framework for backend (only for firebase operations).
     ```
 2.  Build all different compontens of your Project by executing in root:
     ```bash
-    npm run heroku-postbuild
+    npm run postbuild
     ```
 3.  Start the application (Per default it started on Port 8080)
     ```bash

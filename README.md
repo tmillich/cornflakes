@@ -5,6 +5,8 @@
 
 This project is an attempt to create a 3-Tier webserver with **Firebase**, **Angular 8** and a simple **node.js backend server**.
 
+
+https://cornflake.herokuapp.com/
 ## Architecture
 The architecture looks as follows:
 
@@ -22,7 +24,7 @@ I also tried to use no Framework for backend (only for firebase operations).
 	- Return multiple status codes to secify the response to the user.
 	- **Used no Framework for Backend** (only for Firebase operations)
 - **Swagger:**
-	- Show all the HTTPRequest which can be send to the backend
+	- Show all the HTTPRequest which can be send to the backend (https://cornflake.herokuapp.com/swagger)
 - **Normal Login**
     - Integrate Email and password login for signed up User
     - Use tokens to validate User
